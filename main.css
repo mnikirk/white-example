@@ -1,0 +1,306 @@
+/*#region global tags */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .04em;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a, a:hover, a:visited, a:active {
+    color: #333;
+}
+
+hr {
+    clear:both;
+}
+
+/*#endregion*/
+
+/*#region header centered */
+.header {
+    margin: auto;
+}
+
+.header h1, .header h2, .header h3 {
+    text-align: center;
+}
+
+.header-writing {
+    font-family: 'Courgette', cursive;
+}
+/*#endregion */
+
+/*#region navbar centered*/
+.navbar {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar li a {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar li a:hover {
+    background-color: #333;
+    color: #FFF;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar li {
+        display: block;
+    }
+}
+
+/*#endregion*/
+
+/*#region img-slider*/
+.img-slider {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.img-slider-slide {
+    display: none;
+}
+
+.img-slider-caption {
+    border-radius: 50px;
+    background-color: #333;
+    background-color: rgba(51,51,51,0.7);
+    color: #fff;
+    font-size: 1.5em;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+}
+
+.img-slider-caption:hover {
+    background-color: #333;
+    background-color: rgba(51,51,51,1);
+}
+
+.img-slider-caption > a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 1.0;
+}
+.img-slider-prev, .img-slider-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.img-slider-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.img-slider-next:hover, .img-slider-prev:hover {
+    background-color:#000;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.img-slider-dots {
+    text-align: center;
+}
+
+.img-slider-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #C5CED4;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.fade {
+    -moz-animation-name: fade;
+    -webkit-animation-name: fade;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.active, .img-slider-dot:hover {
+    background-color: #717171;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*#endregion*/
+
+/*#region main, sections*/
+.main-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-flex {
+    width: 500px;
+    height: auto;
+    margin: 1em;
+    vertical-align: top;
+}
+
+.section-flex p {
+    text-align: justify;
+}
+/*#endregion*/
+
+/*#region listing cards*/
+.card {
+    width: 300px;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 2%;
+    text-align: center;
+    box-shadow: 5px 5px 5px #C5CED4;
+}
+
+.card li {
+    text-align: left;
+}
+
+.card-btn {
+    width: 100%;
+    border: none;
+    outline: 0;
+    padding: 0.5em;
+    background-color: #333;
+    color: #fff;
+}
+
+.card-btn:hover {
+    background-color: #808080;
+    cursor: pointer;
+}
+
+/*#endregion*/
+
+/*#region contact-form */
+.contact-form form {
+    width: 50%;
+    margin: 0.5em auto;
+    clear: both;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 1em 0;
+    display: inline-block;
+}
+
+.form-btn {
+    width: 100px;
+    text-align: center;
+    float: right;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em;
+    margin: 1em 0 1em 1em;
+    border: none;
+}
+
+.form-btn:hover {
+    background-color: #808080;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-form form {
+        width: 75%;
+        margin: 0.5em auto;
+        clear: both;
+    }
+}
+/*#endregion*/
+
+/* #region Footer - gray box */
+.footer-box {
+    clear: left;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #C5CED4;
+    border-radius: 25px;
+}
+
+.footer-box p {
+    padding: 15px;
+}
+/* #endregion */
+
+/* #region Footer - no box */
+.footer {
+    clear: left;
+    padding: 1em 0 1em 2em;
+}
+
+/* #endregion */
+
